@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigaion_"
+    tools:starDestination = "@+id/secon_fragment"
+    app:startDestination="@id/second">
+    <fragment
+        android:id="@+id/second"
+        android:name="com.learn.test.Second"
+        android:label="Second"
+        tools:layout="@layout/fragment_second">
+        <action
+            android:id="@+id/action_second_to_three"
+            app:destination="@id/three" />
+    </fragment>
+    <fragment
+        android:id="@+id/three"
+        android:name="com.learn.test.Three"
+        android:label="Three"
+        tools:layout="@layout/fragment_three">
+        <action
+            android:id="@+id/action_three_to_second"
+            app:destination="@id/second" />
+        <action
+            android:id="@+id/action_three_to_four"
+            app:destination="@id/four" />
+    </fragment>
+    <fragment
+        android:id="@+id/four"
+        android:name="com.learn.test.Four"
+        android:label="Four"
+        tools:layout="@layout/fragment_four">
+        <action
+            android:id="@+id/action_four_to_second"
+            app:destination="@id/second" />
+    </fragment>
+</navigation>
