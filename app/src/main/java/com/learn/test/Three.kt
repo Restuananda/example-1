@@ -11,6 +11,8 @@ import com.learn.test.databinding.FragmentThreeBinding
 
 class Three : Fragment() {
 
+    var inputText: String? = ""
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -18,10 +20,12 @@ class Three : Fragment() {
         // Inflate the layout for this fragment
         val binding : FragmentThreeBinding = DataBindingUtil.inflate(inflater,
         R.layout.fragment_three, container, false)
+        inputText = arguments?.getString("input_text")
 
 //        binding.btnNext.setOnClickListener (
 //            Navigation.createNavigateOnClickListener(R.id.action_three_to_second))
 //        setHasOptionsMenu(true)
+        binding.txtThree.text = inputText
         return binding.root
         }
 
