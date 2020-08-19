@@ -7,6 +7,7 @@
             name="data"
             type="com.learn.test.Data" />
     </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/secon_fragment"
         android:layout_width="match_parent"
@@ -17,16 +18,18 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:textAlignment="center"
             android:layout_height="wrap_content"
             android:background="@color/colorBlue"
-            android:textColor="#ffff"
             android:text="@{data.firstName}"
+            android:textAlignment="center"
+            android:textColor="#ffff"
             android:textSize="32sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.396"
             tools:text="Hello" />
 
         <EditText
@@ -42,6 +45,19 @@
             app:layout_constraintTop_toBottomOf="@+id/textView"
             />
 
+        <EditText
+            android:id="@+id/edit_umur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/button"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/edit_name" />
+
         <Button
             android:id="@+id/btn_next"
             android:layout_width="wrap_content"
@@ -53,9 +69,10 @@
             app:layout_constraintEnd_toEndOf="@+id/textView"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/edit_name"
+            app:layout_constraintTop_toBottomOf="@+id/edit_umur"
             tools:ignore="MissingConstraints" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

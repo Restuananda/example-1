@@ -13,6 +13,7 @@
         <action
             android:id="@+id/action_second_to_three"
             app:destination="@id/three" />
+
     </fragment>
     <fragment
         android:id="@+id/three"
@@ -25,6 +26,13 @@
         <action
             android:id="@+id/action_three_to_four"
             app:destination="@id/four" />
+        <argument
+            android:name="nama"
+            app:argType="string" />
+        <argument
+            android:name="umur"
+            app:argType="integer"
+            />
     </fragment>
     <fragment
         android:id="@+id/four"
